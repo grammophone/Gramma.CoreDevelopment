@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="yes"?>
+
+<analyses>
+	<analysis>
+		<form>...</form>
+		<lemma>...</lemma>
+		<pos>[PUNCTUATION]</pos>
+	</analysis>
+	<analysis>
+		<form>.</form>
+		<lemma>.</lemma>
+		<pos>[PUNCTUATION]</pos>
+	</analysis>
+	<analysis>
+		<form>,</form>
+		<lemma>,</lemma>
+		<pos>[PUNCTUATION]</pos>
+	</analysis>
+	<analysis>
+		<form>;</form>
+		<lemma>;</lemma>
+		<pos>[PUNCTUATION]</pos>
+	</analysis>
+	<analysis>
+		<form>!</form>
+		<lemma>!</lemma>
+		<pos>[PUNCTUATION]</pos>
+	</analysis>
+	<analysis>
+		<form>[1</form> <!-- Left parenthesis. -->
+		<lemma>[1</lemma>
+		<pos>[PUNCTUATION]</pos>
+	</analysis>
+	<analysis>
+		<form>]1</form> <!-- Right parenthesis. -->
+		<lemma>]1</lemma>
+		<pos>[PUNCTUATION]</pos>
+	</analysis>
+	<analysis>
+		<form>:</form> <!-- In BETA code, this is upper stop. -->
+		<lemma>:</lemma>
+		<pos>[PUNCTUATION]</pos>
+	</analysis>
+	<analysis>
+		<form>-</form>
+		<lemma>-</lemma>
+		<pos>[PUNCTUATION]</pos>
+	</analysis>
+</analyses>

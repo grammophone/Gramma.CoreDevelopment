@@ -1,0 +1,305 @@
+﻿<Setup
+	xmlns="clr-namespace:Gramma.Inference.Configuration;assembly=Gramma.Inference"
+	xmlns:p="clr-namespace:Gramma.LanguageModel.Provision;assembly=Gramma.LanguageModel"
+	xmlns:gp="clr-namespace:Gramma.LanguageModel.Greek.Provision;assembly=Gramma.LanguageModel.Greek.Provision"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:perseus="clr-namespace:Gramma.LanguageModel.Greek.TrainingSources.Perseus;assembly=Gramma.LanguageModel.Greek.TrainingSources"
+	xmlns:tischendorf="clr-namespace:Gramma.LanguageModel.Greek.TrainingSources.Tischendorf;assembly=Gramma.LanguageModel.Greek.TrainingSources"
+	xmlns:lxx="clr-namespace:Gramma.LanguageModel.Greek.TrainingSources.LXX;assembly=Gramma.LanguageModel.Greek.TrainingSources"
+	xmlns:ts="clr-namespace:Gramma.LanguageModel.TrainingSources;assembly=Gramma.LanguageModel">
+	
+	<Setup.LanguageProviders>
+
+		<gp:GreekLanguageProvider x:Name="greek" />
+		
+	</Setup.LanguageProviders>
+	
+	<Setup.TrainingSets>
+
+		<ts:TrainingSet LanguageProvider="{x:Reference greek}" >
+		
+			<ts:TrainingSet.TaggedWordTrainingSources>
+
+				<perseus:PerseusTaggedWordTrainingSource 
+					MorphologyFilename=".\Training sets\Perseus\greek.punctuation.xml" />
+
+				<perseus:PerseusTaggedWordTrainingSource 
+					MorphologyFilename=".\Training sets\Perseus\hebrew.interjections.xml" />
+
+				<perseus:PerseusTaggedWordTrainingSource 
+					MorphologyFilename=".\Training sets\Perseus\greek.morph.xml">
+					
+					<perseus:PerseusTaggedWordTrainingSource.AllowedDialects>
+						<perseus:Dialect Name="attic" />
+						<perseus:Dialect Name="ionic" />
+						<perseus:Dialect Name="epic" />
+					</perseus:PerseusTaggedWordTrainingSource.AllowedDialects>
+				</perseus:PerseusTaggedWordTrainingSource>
+
+			</ts:TrainingSet.TaggedWordTrainingSources>
+			
+			<ts:TrainingSet.UntaggedWordTrainingSources>
+				
+				<perseus:PerseusUntaggedWordTrainingSource 
+					MorphologyFilename=".\Training sets\Perseus\greek.morph.xml" />
+
+			</ts:TrainingSet.UntaggedWordTrainingSources>
+			
+			<ts:TrainingSet.SentenceTrainingSources>
+
+				<lxx:LXXSentenceTrainingSource
+						Filename=".\Training sets\LXX\Μορφολογία Παλαιᾶς Διαθήκης.txt" />
+
+				<ts:KFoldTrainingSource x:TypeArguments="ts:TaggedSentence" FoldSize="20" FoldOffset="0" Mode="Training">
+
+					<!--
+					<perseus:PerseusSentenceTrainingSource 
+						TreeBankFilename=".\Training sets\Perseus\Complete treebank - agdt-1.7.xml" />
+					-->
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\1CO.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\1JO.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\1PE.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\1TH.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\1TI.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\2CO.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\2JO.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\2PE.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\2TH.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\2TI.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\3JO.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\AC.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\COL.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\EPH.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\GA.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\HEB.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\JAS.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\JOH.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\JUDE.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\LU.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\MR.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\MT.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\PHM.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\PHP.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\RE.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\RO.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\TIT.txt" />
+
+					<perseus:PerseusSentenceTrainingSource 
+						TreeBankFilename=".\Training sets\Perseus\Ὅμηρος\Ἰλιάς.xml" />
+
+					<perseus:PerseusSentenceTrainingSource 
+						TreeBankFilename=".\Training sets\Perseus\Ὅμηρος\Ὀδύσσεια.xml" />
+
+					<perseus:PerseusSentenceTrainingSource 
+						TreeBankFilename=".\Training sets\Perseus\Πλάτων\Εὐθύφρων.xml" />
+					
+					<perseus:PerseusSentenceTrainingSource
+						TreeBankFilename=".\Training sets\Perseus\Ἀθήναιος\grctb.1.6.tb.xml"
+						Encoding="Unicode" />
+
+					<perseus:PerseusSentenceTrainingSource
+						TreeBankFilename=".\Training sets\Perseus\Ἀθήναιος\grctb.2.4.tb.xml"
+						Encoding="Unicode" />
+
+					<perseus:PerseusSentenceTrainingSource
+						TreeBankFilename=".\Training sets\Perseus\Ἀθήναιος\grctb.3.2.tb.xml"
+						Encoding="Unicode" />
+
+				</ts:KFoldTrainingSource>
+
+			</ts:TrainingSet.SentenceTrainingSources>
+		
+		</ts:TrainingSet>
+		
+	</Setup.TrainingSets>
+
+	<Setup.ValidationSets>
+
+		<ts:ValidationSet LanguageProvider="{x:Reference greek}">
+
+			<ts:ValidationSet.TaggedWordTrainingSources>
+
+				<perseus:PerseusTaggedWordTrainingSource 
+					MorphologyFilename=".\Training sets\Perseus\greek.punctuation.xml" />
+
+				<perseus:PerseusTaggedWordTrainingSource 
+					MorphologyFilename=".\Training sets\Perseus\greek.morph.xml">
+
+					<perseus:PerseusTaggedWordTrainingSource.AllowedDialects>
+						<perseus:Dialect Name="attic" />
+						<perseus:Dialect Name="ionic" />
+					</perseus:PerseusTaggedWordTrainingSource.AllowedDialects>
+				</perseus:PerseusTaggedWordTrainingSource>
+
+			</ts:ValidationSet.TaggedWordTrainingSources>
+
+			<ts:ValidationSet.SentenceValidationSources>
+
+				<ts:KFoldTrainingSource x:TypeArguments="ts:TaggedSentence" FoldSize="20" FoldOffset="0" Mode="Validation">
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\1CO.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\1JO.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\1PE.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\1TH.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\1TI.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\2CO.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\2JO.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\2PE.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\2TH.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\2TI.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\3JO.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\AC.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\COL.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\EPH.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\GA.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\HEB.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\JAS.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\JOH.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\JUDE.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\LU.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\MR.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\MT.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\PHM.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\PHP.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\RE.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\RO.txt" />
+
+					<tischendorf:TischendorfSentenceTrainingSource 
+						Filename=".\Training sets\Tischendorf\TIT.txt" />
+
+					<!--<perseus:PerseusSentenceTrainingSource 
+						TreeBankFilename=".\Training sets\Perseus\Ὅμηρος\Ἰλιάς.xml" />
+
+					<perseus:PerseusSentenceTrainingSource 
+						TreeBankFilename=".\Training sets\Perseus\Ὅμηρος\Ὀδύσσεια.xml" />
+
+					<perseus:PerseusSentenceTrainingSource 
+						TreeBankFilename=".\Training sets\Perseus\Πλάτων\Εὐθύφρων.xml" />
+
+					<perseus:PerseusSentenceTrainingSource
+						TreeBankFilename=".\Training sets\Perseus\Ἀθήναιος\grctb.1.6.tb.xml"
+						Encoding="Unicode" />
+
+					<perseus:PerseusSentenceTrainingSource
+						TreeBankFilename=".\Training sets\Perseus\Ἀθήναιος\grctb.2.4.tb.xml"
+						Encoding="Unicode" />
+
+					<perseus:PerseusSentenceTrainingSource
+						TreeBankFilename=".\Training sets\Perseus\Ἀθήναιος\grctb.3.2.tb.xml"
+						Encoding="Unicode" />-->
+
+
+				</ts:KFoldTrainingSource>
+
+			</ts:ValidationSet.SentenceValidationSources>
+
+		</ts:ValidationSet>
+
+	</Setup.ValidationSets>
+
+</Setup>

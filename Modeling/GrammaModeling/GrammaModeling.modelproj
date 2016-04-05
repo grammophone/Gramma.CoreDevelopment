@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{00b598fa-5d4a-44f1-a685-757a3cbb03f5}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>GrammaModeling</Name>
+    <RootNamespace>LanguageModelModeling</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="false" />
+  <ItemGroup>
+    <Content Include="LexicaDomain.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="LexicaDomain.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>LexicaDomain.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="EditCommandSystem.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="EditCommandSystem.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>EditCommandSystem.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="LanguageProvider.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="LanguageProvider.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>LanguageProvider.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="LexicaImporting.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="LexicaImporting.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>LexicaImporting.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package1_2106.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_2106.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0056.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0140.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0203.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0243.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0246.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0317.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0352.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1303.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1305.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1311.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1343.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1345.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1405.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1418.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1836.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1851.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_2106.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_2154.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_2206.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_2356.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SentencesTraining.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SentencesTraining.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SentencesTraining.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="TagSystem.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="TagSystem.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>TagSystem.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="TrainingProvision.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="TrainingProvision.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>TrainingProvision.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Training.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Training.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Training.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="WordsTraining.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="WordsTraining.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>WordsTraining.classdiagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\LanguageModelModeling.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,44 @@
+﻿<Window x:Class="Gramma.Inference.Evaluator.InferenceInformationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Inference Information" Height="340" Width="340" FontSize="14" WindowStyle="ToolWindow" ShowActivated="False">
+	<Window.Background>
+		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+			<GradientStop Color="#C0FFE6BE" Offset="0" />
+			<GradientStop Color="#00FFE0D0" Offset="1" />
+		</LinearGradientBrush>
+	</Window.Background>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto" />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+
+		<Label Grid.Row="0" Grid.Column="0">Word form</Label>
+		
+		<TextBox Grid.Row="0" Grid.Column="1" IsEnabled="False" Text="{Binding Path=Form, Mode=OneWay}"/>
+		
+		<Label Grid.Row="1" Grid.Column="0">Inferred Lemma</Label>
+		
+		<TextBox Grid.Row="1" Grid.Column="1" IsEnabled="False" Text="{Binding Path=Lemma, Mode=OneWay}" />
+		
+		<Label Grid.Row="2" Grid.Column="0">Tag Type</Label>
+		
+		<TextBox Grid.Row="2" Grid.Column="1" IsEnabled="False" Text="{Binding Path=Tag.Type.Name, Mode=OneWay}" />
+
+		<DataGrid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding Path=Tag.Inflections, Mode=OneWay}" 
+							GridLinesVisibility="None" AutoGenerateColumns="False">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Inflection Type" Binding="{Binding Path=Type.Name, Mode=OneWay}" />
+				<DataGridTextColumn Header="Inflection Name" Binding="{Binding Path=Name, Mode=OneWay}" />
+			</DataGrid.Columns>
+		</DataGrid>
+	</Grid>
+	
+</Window>

@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="yes"?>
+
+<analyses>
+	<analysis>
+		<form>w)sanna/</form>
+		<lemma>w)sanna/</lemma>
+		<pos>exclam</pos>
+		<feature>indeclform</feature>
+	</analysis>
+	<analysis>
+		<form>a)llhlou/i+a</form>
+		<lemma>a)llhlou/i+a</lemma>
+		<pos>exclam</pos>
+		<feature>indeclform</feature>
+	</analysis>
+</analyses>

@@ -1,0 +1,397 @@
+﻿<Window x:Class="Gramma.Inference.Trainer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:my="clr-namespace:Gramma.Inference.Trainer"
+				xmlns:conf="clr-namespace:Gramma.Inference.Configuration;assembly=Gramma.Inference"
+				xmlns:sys="clr-namespace:System;assembly=mscorlib"
+				xmlns:common="clr-namespace:Gramma.Windows;assembly=Gramma.Windows"
+				xmlns:system="clr-namespace:System;assembly=mscorlib"
+				xmlns:sentences="clr-namespace:Gramma.Inference.Sentences;assembly=Gramma.Inference"
+        Title="Training Options Definition" Height="696" Width="600" MinHeight="556" MinWidth="600">
+	<Window.Resources>
+		<GridLength x:Key="labelWidth">90</GridLength>
+		<my:ParallelismConverter x:Key="parallelismConverter"/>
+
+		<Style TargetType="common:BoundRadioButton" BasedOn="{StaticResource controlStyle}">
+		</Style>
+		
+		<ObjectDataProvider x:Key="wordScoringPolicyValuesProvider"
+												MethodName="GetValues" ObjectType="{x:Type system:Enum}">
+			<ObjectDataProvider.MethodParameters>
+				<x:Type TypeName="sentences:WordScoringPolicy" />
+			</ObjectDataProvider.MethodParameters>
+		</ObjectDataProvider>
+
+		<ObjectDataProvider x:Key="decayFunctionTypeValuesProvider"
+												MethodName="GetValues" ObjectType="{x:Type system:Enum}">
+			<ObjectDataProvider.MethodParameters>
+				<x:Type TypeName="my:DecayFunctionType" />
+			</ObjectDataProvider.MethodParameters>
+		</ObjectDataProvider>
+
+	</Window.Resources>
+	
+	<Window.Background>
+		<ImageBrush ImageSource="/Gramma.Inference.Trainer;component/Images/img25.jpg" Opacity="0.3" Stretch="UniformToFill" />
+	</Window.Background>
+	
+	<Window.CommandBindings>
+		<CommandBinding Command="New" Executed="ExecuteNew" CanExecute="CanExecuteNewCommand" />
+		<CommandBinding Command="Open" CanExecute="CanExecuteOpenCommand" Executed="ExecuteOpen" />
+		<CommandBinding Command="Save" Executed="ExecuteSave" CanExecute="CanExecuteSaveCommand" />
+		<CommandBinding Command="SaveAs" CanExecute="CanExecuteSaveCommand" Executed="ExecuteSaveAs" />
+		<CommandBinding Command="Close" Executed="ExecuteClose" CanExecute="CanExecuteCloseCommand" />
+		<CommandBinding Command="{x:Static my:MainWindow.TrainCommand}" Executed="ExecuteTrain" CanExecute="CanExecuteTrain" />
+		<CommandBinding Command="{x:Static my:MainWindow.TrainTaggedWordsCommand}" CanExecute="CanExecuteTrainTaggedWords" Executed="ExecuteTrainTaggedWords" />
+		<CommandBinding Command="{x:Static my:MainWindow.TrainSentencesCommand}" CanExecute="CanExecuteTrainTaggedSentences" Executed="ExecuteTrainSentences" />
+		<CommandBinding Command="{x:Static my:MainWindow.LoadInferenceResourceCommand}" CanExecute="CanExecuteLoadInferenceResource" Executed="ExecuteLoadInferenceResource" />
+		<CommandBinding Command="{x:Static my:MainWindow.LoadTaggedWordsTrainingCommand}" CanExecute="CanExecuteLoadTaggedWordsTraining" Executed="ExecuteLoadTaggedWordsTraining" />
+		<CommandBinding Command="{x:Static my:MainWindow.LoadSentencesTrainingCommand}" CanExecute="CanExecuteLoadSentencesTraining" Executed="ExecuteLoadSentencesTraining" />
+		<CommandBinding Command="{x:Static my:MainWindow.SaveInferenceResourceCommand}" CanExecute="CanExecuteSaveInferenceResource" Executed="ExecuteSaveInferenceResource" />
+		<CommandBinding Command="{x:Static my:MainWindow.SaveTaggedWordsTrainingCommand}" CanExecute="CanExecuteSaveTaggedWordsTraining" Executed="ExecuteSaveTaggedWordsTraining" />
+		<CommandBinding Command="{x:Static my:MainWindow.SaveSentencesTrainingCommand}" CanExecute="CanExecuteSaveSentencesTraining" Executed="ExecuteSaveSentencesTraining" />
+		<CommandBinding Command="{x:Static my:MainWindow.ValidateConfiguredSentencesSetCommand}" CanExecute="CanExecuteValidateConfiguredSentencesSet" Executed="ExecuteValidateConfiguredSentencesSet" />
+		<CommandBinding Command="{x:Static my:MainWindow.ValidateSentencesSetCommand}" CanExecute="CanExecuteValidateSentencesSet" Executed="ExecuteValidateSentencesSet" />
+		<CommandBinding Command="{x:Static my:MainWindow.ValidateWordsSetCommand}" CanExecute="CanExecuteValidateWordsSet" Executed="ExecuteValidateWordsSet" />
+		<CommandBinding Command="{x:Static my:MainWindow.ValidateConfiguredWordsSetCommand}" Executed="ExecuteValidateConfiguredWordsSet" CanExecute="CanExecuteValidateConfiguredWordsSet" />
+	</Window.CommandBindings>
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<Grid Name="formGrid" Grid.Row="0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+
+			<Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" IsMainMenu="True">
+				<MenuItem Header="_File">
+					<MenuItem Header="_New Training Options" Command="New" />
+					<MenuItem Header="_Open Training Options" Command="Open" />
+					<MenuItem Header="_Save Training Options" Command="Save" />
+					<MenuItem Header="Save Training Options _As" Command="SaveAs" />
+					<Separator />
+					<MenuItem Command="{x:Static my:MainWindow.LoadInferenceResourceCommand}"/>
+					<MenuItem Command="{x:Static my:MainWindow.SaveInferenceResourceCommand}"/>
+					<Separator />
+					<MenuItem Command="{x:Static my:MainWindow.LoadTaggedWordsTrainingCommand}"/>
+					<MenuItem Command="{x:Static my:MainWindow.SaveTaggedWordsTrainingCommand}"/>
+					<Separator />
+					<MenuItem Command="{x:Static my:MainWindow.LoadSentencesTrainingCommand}"/>
+					<MenuItem Command="{x:Static my:MainWindow.SaveSentencesTrainingCommand}"/>
+					<Separator />
+					<MenuItem Header="E_xit" Command="Close" />
+				</MenuItem>
+				<MenuItem Header="_Training">
+					<MenuItem Command="{x:Static my:MainWindow.TrainTaggedWordsCommand}"/>
+					<MenuItem Command="{x:Static my:MainWindow.TrainSentencesCommand}"/>
+					<MenuItem Command="{x:Static my:MainWindow.TrainCommand}"/>
+				</MenuItem>
+				<MenuItem Header="_Validation">
+					<MenuItem Command="{x:Static my:MainWindow.ValidateConfiguredWordsSetCommand}"/>
+					<MenuItem Command="{x:Static my:MainWindow.ValidateWordsSetCommand}"/>
+					<Separator/>
+					<MenuItem Command="{x:Static my:MainWindow.ValidateConfiguredSentencesSetCommand}"/>
+					<MenuItem Command="{x:Static my:MainWindow.ValidateSentencesSetCommand}"/>
+				</MenuItem>
+			</Menu>
+
+			<GroupBox Grid.Row="1" Grid.Column="0">
+
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="{StaticResource ResourceKey=labelWidth}"/>
+						<ColumnDefinition />
+					</Grid.ColumnDefinitions>
+					<Label Grid.Row="1" Grid.Column="0">Language</Label>
+					<ComboBox Name="languagesComboBox" 
+									Grid.Row="1" Grid.Column="1" 
+									DisplayMemberPath="LanguageProvider.LanguageName" SelectedValuePath="LanguageProvider.LanguageKey">
+						<ComboBox.SelectedValue>
+							<Binding ValidatesOnExceptions="True" Path="LanguageProviderKey">
+								<Binding.ValidationRules>
+									<common:NotNullValidationRule ValidatesOnTargetUpdated="True" />
+								</Binding.ValidationRules>
+							</Binding>
+						</ComboBox.SelectedValue>
+					</ComboBox>
+				</Grid>
+			</GroupBox>
+
+			<CheckBox Name="useCrossValidationCheckBox" VerticalAlignment="Center"
+							Grid.Row="1" Grid.Column="1" 
+							Foreground="White"
+							IsChecked="{Binding Path=UseCrossValidation}">Use Cross-Validation</CheckBox>
+
+			<Grid Grid.Row="1" Grid.Column="2" Margin="6">
+				<Grid.RowDefinitions>
+					<RowDefinition/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="{StaticResource ResourceKey=labelWidth}"/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+
+				<Label Grid.Row="0" Grid.Column="0" IsEnabled="{Binding UseCrossValidation}" Foreground="White">Fold Count</Label>
+				<TextBox Name="foldCountTextBox" 
+								 Grid.Row="0" Grid.Column="1" 
+								 Text="{Binding Path=FoldCount, ValidatesOnExceptions=True}"
+								 IsEnabled="{Binding UseCrossValidation}"/>
+
+			</Grid>
+
+			<GroupBox Header="Margin Slack" Grid.Row="2" Grid.Column="0">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="{StaticResource ResourceKey=labelWidth}"/>
+						<ColumnDefinition />
+					</Grid.ColumnDefinitions>
+
+					<Label Grid.Row="0" Grid.Column="0">Start</Label>
+					<TextBox Name="marginSlackStartTextBox" Grid.Row="0" Grid.Column="1" Text="{Binding MarginSlackStart, ValidatesOnExceptions=True}"/>
+
+					<Label Grid.Row="1" Grid.Column="0" IsEnabled="{Binding UseCrossValidation}">End</Label>
+					<TextBox Name="marginSlackEndTextBox" 
+								 Grid.Row="1" Grid.Column="1" 
+								 Text="{Binding MarginSlackEnd, ValidatesOnExceptions=True}"
+								 IsEnabled="{Binding UseCrossValidation}"/>
+
+					<Label Grid.Row="2" Grid.Column="0" IsEnabled="{Binding UseCrossValidation}">Step Factor</Label>
+					<TextBox Name="marginSlackFactorTextBox" 
+								 Grid.Row="2" Grid.Column="1" 
+								 Text="{Binding MarginSlackStepFactor, ValidatesOnExceptions=True}" 
+								 IsEnabled="{Binding UseCrossValidation}"/>
+				</Grid>
+			</GroupBox>
+
+			<GroupBox Header="String exponent" Grid.Row="2" Grid.Column="1">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="{StaticResource ResourceKey=labelWidth}"/>
+						<ColumnDefinition />
+					</Grid.ColumnDefinitions>
+
+					<Label Grid.Row="0" Grid.Column="0">Start</Label>
+					<TextBox Name="stringExponentStartTextBox" Grid.Row="0" Grid.Column="1" Text="{Binding StringExponentStart, ValidatesOnExceptions=True}"/>
+
+					<Label Grid.Row="1" Grid.Column="0" IsEnabled="{Binding UseCrossValidation}">End</Label>
+					<TextBox Name="stringExponentEndTextBox" 
+								 Grid.Row="1" Grid.Column="1" 
+								 Text="{Binding StringExponentEnd, ValidatesOnExceptions=True}"
+								 IsEnabled="{Binding UseCrossValidation}"/>
+
+					<Label Grid.Row="2" Grid.Column="0" IsEnabled="{Binding UseCrossValidation}">Step Factor</Label>
+					<TextBox Name="stringExponentStepFactorTextBox" 
+								 Grid.Row="2" Grid.Column="1" 
+								 Text="{Binding StringExponentStepFactor, ValidatesOnExceptions=True}"
+								 IsEnabled="{Binding UseCrossValidation}"/>
+				</Grid>
+			</GroupBox>
+
+			<GroupBox Header="Sentence sampling" Grid.Row="2" Grid.Column="2" Grid.RowSpan="4">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="28*" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="{StaticResource ResourceKey=labelWidth}"/>
+						<ColumnDefinition />
+					</Grid.ColumnDefinitions>
+
+					<Label Grid.Row="0" Grid.Column="0">Stride</Label>
+
+					<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding SentencesStride, ValidatesOnExceptions=True}"/>
+
+					<Label Grid.Row="1" Grid.Column="0">Bigram drop</Label>
+
+					<TextBox Grid.Row="1" Grid.Column="1" Text="{Binding TagBiGramsDropout, ValidatesOnExceptions=True}" />
+
+					<Label Grid.Row="2" Grid.Column="0">Regularize</Label>
+
+					<TextBox Grid.Row="2" Grid.Column="1" Text="{Binding CrfWeightsRegularization, ValidatesOnExceptions=True}"/>
+
+					<common:BoundRadioButton Name="offlineTrainingRadioButton" 
+																 Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" 
+																 GroupName="sentenceTraining"
+																 RadioBinding="{Binding SentencesTrainType}" RadioValue="{x:Static my:SentencesTrainType.Offline}">Offline training</common:BoundRadioButton>
+					<common:BoundRadioButton Name="onlineTrainingRadioButton" 
+																 Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
+																 GroupName="sentenceTraining"
+																 RadioBinding="{Binding SentencesTrainType}" RadioValue="{x:Static my:SentencesTrainType.Online}">Online training</common:BoundRadioButton>
+
+					<Label Grid.Row="5" Grid.Column="0" 
+							 IsEnabled="{Binding ElementName=onlineTrainingRadioButton, Path=IsChecked}">Max samples</Label>
+
+					<TextBox Name="maxSentenceSamplesTextBox" Grid.Row="5" Grid.Column="1" 
+								 IsEnabled="{Binding ElementName=onlineTrainingRadioButton, Path=IsChecked}"
+								 Text="{Binding Path=MaxSentencesSamples, ValidatesOnExceptions=True}" />
+
+					<Label Grid.Row="6" Grid.Column="0"
+							 IsEnabled="{Binding ElementName=onlineTrainingRadioButton, Path=IsChecked}">Step coeffic.</Label>
+
+					<TextBox Name="crfStepSizeCoefficientTextBox" Grid.Row="6" Grid.Column="1" 
+								 IsEnabled="{Binding ElementName=onlineTrainingRadioButton, Path=IsChecked}"
+								 Text="{Binding Path=CrfStepSizeCoefficient, ValidatesOnExceptions=True}" />
+
+					<Label Grid.Row="7" Grid.Column="0"
+							 IsEnabled="{Binding ElementName=onlineTrainingRadioButton, Path=IsChecked}">Step decay</Label>
+
+					<ComboBox Grid.Row="7" Grid.Column="1"
+									IsEnabled="{Binding ElementName=onlineTrainingRadioButton, Path=IsChecked}"
+									ItemsSource="{Binding Source={StaticResource decayFunctionTypeValuesProvider}}">
+						<ComboBox.SelectedValue>
+							<Binding ValidatesOnExceptions="True" Path="DecayFunctionType">
+								<Binding.ValidationRules>
+									<common:NotNullValidationRule ValidatesOnTargetUpdated="True" />
+								</Binding.ValidationRules>
+							</Binding>
+						</ComboBox.SelectedValue>
+					</ComboBox>
+
+					<Label Grid.Row="8" Grid.Column="0">Scoring</Label>
+
+					<ComboBox Grid.Row="8" Grid.Column="1"
+									ItemsSource="{Binding Source={StaticResource wordScoringPolicyValuesProvider}}">
+						<ComboBox.SelectedValue>
+							<Binding ValidatesOnExceptions="True" Path="WordScoringPolicy">
+								<Binding.ValidationRules>
+									<common:NotNullValidationRule ValidatesOnTargetUpdated="True" />
+								</Binding.ValidationRules>
+							</Binding>
+						</ComboBox.SelectedValue>
+					</ComboBox>
+					<CheckBox Grid.Row="10" Grid.ColumnSpan="2" IsChecked="{Binding Path=CondenseSingularFeatures}">Condense features</CheckBox>
+				</Grid>
+
+			</GroupBox>
+
+			<CheckBox Name="includeGaussianCheckBox" Grid.Row="3" IsChecked="{Binding IncludeGaussian}" Foreground="White">Include Gaussian Kernels</CheckBox>
+
+			<GroupBox Grid.Row="4" Grid.Column="0" IsEnabled="{Binding IncludeGaussian}">
+				<GroupBox.Header>
+					Gaussian Kernel Variance
+				</GroupBox.Header>
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="{StaticResource ResourceKey=labelWidth}"/>
+						<ColumnDefinition />
+					</Grid.ColumnDefinitions>
+
+					<Label Grid.Row="0" Grid.Column="0">Start</Label>
+					<TextBox Name="gaussianVarianceStartTextBox" Grid.Row="0" Grid.Column="1" Text="{Binding GaussianVarianceStart, ValidatesOnExceptions=True}" />
+
+					<Label Grid.Row="1" Grid.Column="0" IsEnabled="{Binding UseCrossValidation}">End</Label>
+					<TextBox Name="gaussianVarianceEndTextBox" 
+								 Grid.Row="1" Grid.Column="1" 
+								 Text="{Binding GaussianVarianceEnd, ValidatesOnExceptions=True}"
+								 IsEnabled="{Binding UseCrossValidation}"/>
+
+					<Label Grid.Row="2" Grid.Column="0" IsEnabled="{Binding UseCrossValidation}">Step Factor</Label>
+					<TextBox Name="gaussianVarianceStepFactorTextBox" 
+								 Grid.Row="2" Grid.Column="1" 
+								 Text="{Binding GaussianVarianceStepFactor, ValidatesOnExceptions=True}"
+								 IsEnabled="{Binding UseCrossValidation}"/>
+				</Grid>
+			</GroupBox>
+
+			<GroupBox Grid.Row="4" Grid.Column="1">
+				<GroupBox.Header>Word sampling</GroupBox.Header>
+
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="{StaticResource ResourceKey=labelWidth}"/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+
+					<Label Grid.Row="0" Grid.Column="0">Dropout</Label>
+
+					<TextBox Name="dropoutTextBox" Grid.Row="0" Grid.Column="1" Text="{Binding Path=WordDropout, ValidatesOnExceptions=True}"/>
+
+					<Label Grid.Row="1" Grid.Column="0">Decimation</Label>
+
+					<TextBox Name="decimationTextBox" Grid.Row="1" Grid.Column="1" Text="{Binding Path=WordDecimation, ValidatesOnExceptions=True}"/>
+				</Grid>
+			</GroupBox>
+
+			<GroupBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Header="General">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="{StaticResource ResourceKey=labelWidth}" />
+						<ColumnDefinition />
+						<ColumnDefinition Width="{StaticResource ResourceKey=labelWidth}" />
+						<ColumnDefinition />
+					</Grid.ColumnDefinitions>
+
+					<Label Grid.Row="0" Grid.Column="0">Parallelism</Label>
+
+					<TextBox Name="parallelismTextBox" 
+								 Grid.Row="0" Grid.Column="1" 
+								 Text="{Binding Path=DegreeOfParallelism, ValidatesOnExceptions=True, Converter={StaticResource parallelismConverter}}"/>
+				</Grid>
+			</GroupBox>
+
+
+		</Grid>
+
+		<GroupBox Grid.Row="1">
+			<GroupBox.Header>Trace</GroupBox.Header>
+
+			<TextBox Name="traceTextBox" 
+							 Height="Auto"
+							 TextWrapping="Wrap"
+							 VerticalScrollBarVisibility="Visible"/>
+		</GroupBox>
+
+	</Grid>
+</Window>

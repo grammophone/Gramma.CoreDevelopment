@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{90f7beae-bd7e-46d3-b1b8-92dd41be3faf}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>CRFModeling</Name>
+    <RootNamespace>CRFModeling</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="false" />
+  <ItemGroup>
+    <Content Include="BigramSet.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="BigramSet.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>BigramSet.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="LazySequence.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="LazySequence.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>LazySequence.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Tuple.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tuple.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Tuple.classdiagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="CRF.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CRF.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CRF.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\CRFModeling.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

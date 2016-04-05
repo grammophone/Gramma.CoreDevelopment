@@ -1,0 +1,38 @@
+﻿<Window x:Class="Gramma.Inference.Evaluator.TextImportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="Import Text" Height="400" Width="600">
+	<Window.Resources>
+		<sys:Int32 x:Key="buttonWidth">100</sys:Int32>
+	</Window.Resources>
+	
+	<Window.Background>
+		<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+			<LinearGradientBrush.GradientStops>
+				<GradientStop Offset="0.0" Color="#00FFE0D0" />
+				<GradientStop Offset="1.0" Color="#C0FFE6BE"/>
+			</LinearGradientBrush.GradientStops>
+		</LinearGradientBrush>
+	</Window.Background>
+	
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		
+		<TextBox Name="textBox" Grid.Row="0" Grid.Column="0" 
+						 TextWrapping="Wrap" Height="Auto" VerticalScrollBarVisibility="Visible" 
+						 Background="#D0EAEAEA"
+						 Text="{Binding Path=Text}" FontSize="16" AcceptsReturn="True" />
+		
+		<StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right">
+			<Button Name="okButton" Width="{Binding Source={StaticResource buttonWidth}}" IsDefault="True" Click="okButton_Click">_OK</Button>
+			<Button Name="cancelButton" Width="{Binding Source={StaticResource buttonWidth}}" IsCancel="True">_Cancel</Button>
+		</StackPanel>
+	</Grid>
+</Window>

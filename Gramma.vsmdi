@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestLists xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestList name="Serialization" id="0d71cb11-7540-405f-b49d-93c21d718e95" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <Description>Testing of custom binary serializer Gramma.Serialization.FastBinarySerializer</Description>
+    <TestLinks>
+      <TestLink id="f245f9f7-0a29-e92d-d48e-3cee5b571f49" name="SerializaAndDeserializeAllObjectTypes" storage="..\..\components\gramma.serialization.testing\bin\release\gramma.serialization.testing.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="8fd86cb5-abb5-b328-a3b3-36279ac0d2d3" name="DiscoverMissingSerializableAttribute" storage="..\..\components\gramma.serialization.testing\bin\release\gramma.serialization.testing.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="Conjugate Gradient Truncated Newton optimization" id="1141162b-eef9-4a49-9b79-06f800b27468" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <Description>Tests of optimization using Newton steps performed by truncated Conjugate Gradient iterations.</Description>
+    <TestLinks>
+      <TestLink id="ab80cecc-9e4d-8de3-501c-5c7732676cc2" name="SimpleConstrained" storage="optimizationtest\bin\release\optimizationtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="9bfd602f-4c7b-7a4f-c6b6-575a6f3ff40d" name="BiQuadratic" storage="optimizationtest\bin\release\optimizationtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="e62a83e2-0733-652d-1add-4db88f269d8b" name="MultiQuadratic" storage="optimizationtest\bin\release\optimizationtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="44d22cae-dbd9-91c3-b960-894babea8431" name="ConstrainedQuadratic" storage="optimizationtest\bin\release\optimizationtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="Svm" id="36a8f102-b608-4345-939a-7c6518216760" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <TestLinks>
+      <TestLink id="8ba8f712-4fc5-5494-0507-ae832afe3d86" name="SimpleD2Test" storage="svmtest\bin\release\svmtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="17ab777c-7f2f-1bac-f815-f7b30ffe9aa7" name="HorizontalD2Test" storage="svmtest\bin\release\svmtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="0afc75c4-7d9e-07e3-edf4-67a749e7a5a3" name="HorizontalD2Test" storage="svmtest\bin\release\svmtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="4d37412f-ed81-0e53-2f5b-d09f6fd2da6a" name="SimpleD2Test" storage="svmtest\bin\release\svmtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="33ff51c9-db47-8a8a-bc57-f67b58317766" name="SeparableD2Test" storage="svmtest\bin\release\svmtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="ad4e3074-ad3a-4f42-62b7-400e3792f710" name="SeparableD2Test" storage="svmtest\bin\release\svmtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="Long parallel LINQ" id="7b27f680-6c8a-4d37-8c40-2cd38e8017bb" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <Description>Tests a cusom PLINQ-like subset which specializes on long-running tasks</Description>
+    <TestLinks>
+      <TestLink id="971ab52b-0006-a4cf-9a30-789e526b0280" name="TestException" storage="..\..\components\gramma.parallel.test\bin\release\gramma.parallel.test.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="57dfb236-85f3-4ce4-f731-0bdd93df66f6" name="TestSuccess" storage="..\..\components\gramma.parallel.test\bin\release\gramma.parallel.test.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="Krylov linear solver" id="7c26ae47-aa41-4e18-8d65-cadaa1b8f823" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <Description>Tests of solver of linear systems of type Hw + b = 0 having positive definite matrix H.</Description>
+    <TestLinks>
+      <TestLink id="067fccb9-c49a-2f55-f8ad-747756e264d3" name="TwoByTwo" storage="optimizationtest\bin\release\optimizationtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="77c99015-fd54-c73e-7da9-f6d24ba3987d" name="Trivial" storage="optimizationtest\bin\release\optimizationtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="87ce3396-b5f8-45f8-61e1-47faf57a6f6b" name="ThreeByThree" storage="optimizationtest\bin\release\optimizationtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="a698a99a-1399-bc9f-d67d-5d7983b38166" name="IdentitySystem" storage="optimizationtest\bin\release\optimizationtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="Lists of Tests" id="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <RunConfiguration id="764b9fc8-ef4f-4386-9c05-c745d264ffd6" name="Local" storage="local.testsettings" type="Microsoft.VisualStudio.TestTools.Common.TestRunConfiguration, Microsoft.VisualStudio.QualityTools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestList>
+  <TestList name="Conjugate Gradient Line Search optimization" id="d3476193-1d40-44df-838c-05244a2ab339" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <Description>Test of optimization methods that avoid the use of a Hessian through the use of line search.</Description>
+    <TestLinks>
+      <TestLink id="2e5fec7f-2779-6556-723b-fe22fe0f0a12" name="ConstrainedQuadratic" storage="optimizationtest\bin\release\optimizationtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="2ccee8b8-06f3-ce45-05b2-d50777b5f982" name="BiQuadratic" storage="optimizationtest\bin\release\optimizationtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="9d1cb8d7-ac64-aad0-236a-6ce9c519a783" name="SimpleConstrained" storage="optimizationtest\bin\release\optimizationtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="8d4060de-7815-c6e2-7192-efb6c63bfa21" name="ManualConstrainedQuadratic" storage="optimizationtest\bin\release\optimizationtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="815aa97d-c315-cc13-6e74-cdb9fc690891" name="MultiQuadratic" storage="optimizationtest\bin\release\optimizationtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="0e77dc41-5e1f-6f3b-f226-a1f2a1f7dc16" name="MultiQuartic" storage="optimizationtest\bin\release\optimizationtest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+</TestLists>

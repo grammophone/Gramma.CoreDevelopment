@@ -1,0 +1,46 @@
+﻿<Window x:Class="Gramma.Inference.Evaluator.InferenceResourceProviderPickerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:sys="clr-namespace:System;assembly=mscorlib"
+				xmlns:common="clr-namespace:Gramma.Windows;assembly=Gramma.Windows"
+        Title="Pick Language" Height="134" Width="345" ResizeMode="CanResize" MinWidth="345" MinHeight="134" BorderBrush="{x:Null}">
+	<Window.Resources>
+		<sys:Double x:Key="buttonWidth">80</sys:Double>
+	</Window.Resources>
+	<Window.Background>
+		<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+			<LinearGradientBrush.GradientStops>
+				<GradientStop Offset="0.0" Color="#00FFE0D0" />
+				<GradientStop Offset="1.0" Color="#C0FFE6BE"/>
+			</LinearGradientBrush.GradientStops>
+		</LinearGradientBrush>
+	</Window.Background>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*"/>
+			<ColumnDefinition Width="2*"/>
+		</Grid.ColumnDefinitions>
+		
+		<Label Grid.Row="0" Grid.Column="0">_Language</Label>
+
+		<ComboBox Name="languageComboBox" Grid.Row="0" Grid.Column="1"
+							DisplayMemberPath="LanguageProvider.LanguageName">
+			<ComboBox.SelectedValue>
+				<Binding ValidatesOnExceptions="True" Path="SelectedInferenceResourceProvider">
+					<Binding.ValidationRules>
+						<common:NotNullValidationRule ValidatesOnTargetUpdated="True" />
+					</Binding.ValidationRules>
+				</Binding>
+			</ComboBox.SelectedValue>
+		</ComboBox>
+
+		<StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+			<Button Name="okButton" Width="{StaticResource ResourceKey=buttonWidth}" IsDefault="True" Click="okButton_Click">_OK</Button>
+			<Button Name="cancelButton" Width="{StaticResource ResourceKey=buttonWidth}" IsCancel="True">_Cancel</Button>
+		</StackPanel>
+	</Grid>
+</Window>

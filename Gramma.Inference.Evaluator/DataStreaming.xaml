@@ -1,0 +1,12 @@
+﻿<conf:StreamingSettings
+	xmlns:conf="clr-namespace:Gramma.DataStreaming.Configuration;assembly=Gramma.DataStreaming"
+	xmlns="clr-namespace:Gramma.DataStreaming;assembly=Gramma.DataStreaming"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<conf:StreamingSettings.Streamers>
+		<Streamers>
+			
+		</Streamers>
+	</conf:StreamingSettings.Streamers>
+
+</conf:StreamingSettings>

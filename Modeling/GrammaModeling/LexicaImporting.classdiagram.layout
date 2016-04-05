@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LexicaImporting">
+  <logicalClassDesignerModelMoniker Id="c85a7dd6-3394-4455-ba5b-e5a018e1ebb4" />
+  <nestedChildShapes>
+    <packageShape Id="99cb0aad-d696-4d43-8013-062e291024ab" absoluteBounds="0.5, 0.5, 3.375, 1.75" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="b1b53ec2-f737-4c5d-ba77-ec49c1078e4b" LastKnownName="Gramma.Lexica.Configuration" />
+      <nestedChildShapes>
+        <classShape Id="a72ab0ee-d570-4d0b-959f-5365a6db1e1f" absoluteBounds="1.375, 1, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+          <classMoniker Id="6d979f5e-1958-4e45-b9ea-c95493f43e76" LastKnownName="LexicaSetup" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="89491427-2726-417e-86a1-76fd2a997f9d" absoluteBounds="1.3900000000000001, 1.3900000000000001, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="33ee54cd-9464-4474-80f4-21bc95dadff3" absoluteBounds="1.3900000000000001, 1.6011718675494193, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+      </nestedChildShapes>
+    </packageShape>
+    <packageShape Id="b0be056e-b077-4895-8b63-a27d87383998" absoluteBounds="4.625, 0.5, 4.5, 3" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="4c5dc2df-8541-4e62-88de-d32ed911849d" LastKnownName="Gramma.LanguageModel.TrainingSources" />
+      <nestedChildShapes>
+        <classShape Id="8d969af2-dd44-479a-a532-8182fe1babb9" absoluteBounds="4.875, 1, 2.75, 2.1835936953624091" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+          <classMoniker Id="a3b25724-47f2-4a3e-a01e-952cf7713250" LastKnownName="TrainingSource&lt;T&gt;" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="b2c290b3-0767-4b40-819a-17ef19aac52f" absoluteBounds="4.89, 1.3899999999999997, 2.7199999999999998, 0.36132811258236563" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="c5adc9e7-d534-44d0-a3ef-c5c3d6167a38" absoluteBounds="4.89, 1.7613281125823654, 2.7199999999999998, 1.3222655827800434" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+      </nestedChildShapes>
+    </packageShape>
+    <packageShape Id="fe1ee664-1d84-4ec0-8829-e864fb5fead9" absoluteBounds="0.5, 2.5, 3.375, 2" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="dd98e274-1db2-4a0c-98dc-e8d78e8be4e9" LastKnownName="Gramma.Lexica.Sources" />
+      <nestedChildShapes>
+        <classShape Id="22b952d5-2f86-49c2-acc4-bc7e83c09037" absoluteBounds="0.75, 3, 2.75, 1.2226562251647311" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+          <classMoniker Id="231c76d1-da5b-43db-a172-0c6e639f3d70" LastKnownName="LexiconSourceSet" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="6c95724c-1dc1-41f3-bc53-b5ffdd0e0ade" absoluteBounds="0.765, 3.39, 2.7199999999999998, 0.52148435761531187" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="00605e41-81e8-40fa-b83d-ed02ee72139e" absoluteBounds="0.765, 3.921484357615312, 2.7199999999999998, 0.20117186754941951" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+      </nestedChildShapes>
+    </packageShape>
+    <associationConnector edgePoints="[(3.5 : 3.13178375486578); (4.5 : 3.13178375486578); (4.5 : 2.4506655153301); (4.875 : 2.4506655153301)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="1" targetMultiplicity="*">
+      <associationMoniker Id="704ea47d-7220-4681-b704-9aaac3ccbf01" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="22b952d5-2f86-49c2-acc4-bc7e83c09037" />
+        <classShapeMoniker Id="8d969af2-dd44-479a-a532-8182fe1babb9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.125 : 1.90234373509884); (2.125 : 3)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="1" targetMultiplicity="*">
+      <associationMoniker Id="736f5a92-d842-4f2f-973e-0785a80d018f" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="a72ab0ee-d570-4d0b-959f-5365a6db1e1f" />
+        <classShapeMoniker Id="22b952d5-2f86-49c2-acc4-bc7e83c09037" />
+      </nodes>
+    </associationConnector>
+    <packageShape Id="60f20211-0f5c-4380-8e21-4d171432bff2" absoluteBounds="4.625, 3.75, 4.5, 2.125" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="91d77c70-7640-4c3c-808c-a72cd27f92b1" LastKnownName="Gramma.LanguageModel.Provision" />
+      <nestedChildShapes>
+        <classShape Id="ec9b3b63-743f-472f-a7a2-a50f9d5b9b3d" absoluteBounds="4.875, 4.25, 2.75, 1.3828124701976776" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+          <classMoniker Id="0032f39c-7a62-446b-aa30-820ea8beb441" LastKnownName="LanguageProvider" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="f9e121d6-5cd7-4baa-9758-3343b80e9008" absoluteBounds="4.89, 4.64, 2.7199999999999998, 0.52148435761531187" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="c28fc2b3-4b88-430f-9767-7795a35e5187" absoluteBounds="4.89, 5.171484357615312, 2.7199999999999998, 0.36132811258236563" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+      </nestedChildShapes>
+    </packageShape>
+    <associationConnector edgePoints="[(6.25 : 3.18359369536241); (6.25 : 4.25)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="*" targetMultiplicity="1">
+      <associationMoniker Id="6647ba88-db8e-4415-84a3-2e5503d4186b" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="8d969af2-dd44-479a-a532-8182fe1babb9" />
+        <classShapeMoniker Id="ec9b3b63-743f-472f-a7a2-a50f9d5b9b3d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.125 : 4.22265622516473); (2.125 : 5.09765623509884); (4.875 : 5.09765623509884)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="*" targetMultiplicity="1">
+      <associationMoniker Id="9acd4a42-03a8-4c11-94f8-0cbd24b6d292" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="22b952d5-2f86-49c2-acc4-bc7e83c09037" />
+        <classShapeMoniker Id="ec9b3b63-743f-472f-a7a2-a50f9d5b9b3d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>
