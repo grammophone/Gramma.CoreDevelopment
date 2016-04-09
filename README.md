@@ -1,5 +1,5 @@
 # Grammophone.CoreDevelopment
-This is a Visual Studio 2015 solution for the development and testing of the part-of-speech and lemmatization system using ancient Greek training sources. This repository contains submodules, so make sure you clone recursively.
+This is a Visual Studio 2015 solution for the development and testing of Ennoun, the part-of-speech and lemmatization system, using ancient Greek training sources. This repository contains submodules, so make sure you clone recursively.
 The system revolves around central submodules [Grammophone.LanguageModel](https://github.com/grammophone/Grammophone.LanguageModel) and [Grammophone.EnnounInference](https://github.com/grammophone/Grammophone.EnnounInference).
 
 Currently there are three main projects producing executables in the solution:
