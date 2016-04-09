@@ -6,11 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3A1EA79D-CC67-497E-A0B0-F8139662A54A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3593523F-0431-4E12-8100-55EB11915513}"
-	ProjectSection(SolutionItems) = preProject
-		Grammophone.vsmdi = Grammophone.vsmdi
-		Local.testsettings = Local.testsettings
-		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auxilliary", "Auxilliary", "{32B6E85A-2EEC-4C39-9FD8-A1B2C4AA33AB}"
 EndProject
