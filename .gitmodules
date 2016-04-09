@@ -1,174 +1,174 @@
-[submodule "Components/Gramma.BetaImport"]
+[submodule "Components/Grammophone.BetaImport"]
 	path = Components/Grammophone.BetaImport
-	url = https://github.com/grammophone/Gramma.BetaImport
-[submodule "Components/Gramma.Serialization"]
+	url = https://github.com/grammophone/Grammophone.BetaImport
+[submodule "Components/Grammophone.Serialization"]
 	path = Components/Grammophone.Serialization
-	url = https://github.com/grammophone/Gramma.Serialization
-[submodule "Components/Gramma.Indexing"]
+	url = https://github.com/grammophone/Grammophone.Serialization
+[submodule "Components/Grammophone.Indexing"]
 	path = Components/Grammophone.Indexing
-	url = https://github.com/grammophone/Gramma.Indexing
-[submodule "Components/Gramma.Optimization"]
+	url = https://github.com/grammophone/Grammophone.Indexing
+[submodule "Components/Grammophone.Optimization"]
 	path = Components/Grammophone.Optimization
-	url = https://github.com/grammophone/Gramma.Optimization
-[submodule "Components/Gramma.Caching"]
+	url = https://github.com/grammophone/Grammophone.Optimization
+[submodule "Components/Grammophone.Caching"]
 	path = Components/Grammophone.Caching
-	url = https://github.com/grammophone/Gramma.Caching
-[submodule "Components/Gramma.Configuration"]
+	url = https://github.com/grammophone/Grammophone.Caching
+[submodule "Components/Grammophone.Configuration"]
 	path = Components/Grammophone.Configuration
-	url = https://github.com/grammophone/Gramma.Configuration
-[submodule "Components/Gramma.CRF"]
+	url = https://github.com/grammophone/Grammophone.Configuration
+[submodule "Components/Grammophone.CRF"]
 	path = Components/Grammophone.CRF
-	url = https://github.com/grammophone/Gramma.CRF
-[submodule "Components/Gramma.Optimization.Test"]
+	url = https://github.com/grammophone/Grammophone.CRF
+[submodule "Components/Grammophone.Optimization.Test"]
 	path = Components/Grammophone.Optimization.Test
-	url = https://github.com/grammophone/Gramma.Optimization.Test
-[submodule "Components/Gramma.DataStreaming"]
+	url = https://github.com/grammophone/Grammophone.Optimization.Test
+[submodule "Components/Grammophone.DataStreaming"]
 	path = Components/Grammophone.DataStreaming
-	url = https://github.com/grammophone/Gramma.DataStreaming
-[submodule "Components/Gramma.DataStreaming.Azure"]
+	url = https://github.com/grammophone/Grammophone.DataStreaming
+[submodule "Components/Grammophone.DataStreaming.Azure"]
 	path = Components/Grammophone.DataStreaming.Azure
-	url = https://github.com/grammophone/Gramma.DataStreaming.Azure
-[submodule "Components/Gramma.Parallel"]
+	url = https://github.com/grammophone/Grammophone.DataStreaming.Azure
+[submodule "Components/Grammophone.Parallel"]
 	path = Components/Grammophone.Parallel
-	url = https://github.com/grammophone/Gramma.Parallel
-[submodule "Components/Gramma.Parallel.Test"]
+	url = https://github.com/grammophone/Grammophone.Parallel
+[submodule "Components/Grammophone.Parallel.Test"]
 	path = Components/Grammophone.Parallel.Test
-	url = https://github.com/grammophone/Gramma.Parallel.Test
-[submodule "Components/Gramma.Kernels"]
+	url = https://github.com/grammophone/Grammophone.Parallel.Test
+[submodule "Components/Grammophone.Kernels"]
 	path = Components/Grammophone.Kernels
-	url = https://github.com/grammophone/Gramma.Kernels
-[submodule "Components/Gramma.Linq"]
+	url = https://github.com/grammophone/Grammophone.Kernels
+[submodule "Components/Grammophone.Linq"]
 	path = Components/Grammophone.Linq
-	url = https://github.com/grammophone/Gramma.Linq
-[submodule "Components/Gramma.GenericContentModel"]
+	url = https://github.com/grammophone/Grammophone.Linq
+[submodule "Components/Grammophone.GenericContentModel"]
 	path = Components/Grammophone.GenericContentModel
-	url = https://github.com/grammophone/Gramma.GenericContentModel
-[submodule "Components/Gramma.Windows"]
+	url = https://github.com/grammophone/Grammophone.GenericContentModel
+[submodule "Components/Grammophone.Windows"]
 	path = Components/Grammophone.Windows
-	url = https://github.com/grammophone/Gramma.Windows
-[submodule "Components/Gramma.SVM"]
+	url = https://github.com/grammophone/Grammophone.Windows
+[submodule "Components/Grammophone.SVM"]
 	path = Components/Grammophone.SVM
-	url = https://github.com/grammophone/Gramma.SVM
-[submodule "Components/Gramma.SVM.Test"]
+	url = https://github.com/grammophone/Grammophone.SVM
+[submodule "Components/Grammophone.SVM.Test"]
 	path = Components/Grammophone.SVM.Test
-	url = https://github.com/grammophone/Gramma.SVM.Test
-[submodule "Components/Gramma.LanguageModel"]
+	url = https://github.com/grammophone/Grammophone.SVM.Test
+[submodule "Components/Grammophone.LanguageModel"]
 	path = Components/Grammophone.LanguageModel
-	url = https://github.com/grammophone/Gramma.LanguageModel
-[submodule "Components/Gramma.LanguageModel.Greek.Provision"]
+	url = https://github.com/grammophone/Grammophone.LanguageModel
+[submodule "Components/Grammophone.LanguageModel.Greek.Provision"]
 	path = Components/Grammophone.LanguageModel.Greek.Provision
-	url = https://github.com/grammophone/Gramma.LanguageModel.Greek.Provision
-[submodule "Components/Gramma.LanguageModel.Greek.TrainingSources"]
+	url = https://github.com/grammophone/Grammophone.LanguageModel.Greek.Provision
+[submodule "Components/Grammophone.LanguageModel.Greek.TrainingSources"]
 	path = Components/Grammophone.LanguageModel.Greek.TrainingSources
-	url = https://github.com/grammophone/Gramma.LanguageModel.Greek.TrainingSources
-[submodule "Components/Gramma.Vectors"]
+	url = https://github.com/grammophone/Grammophone.LanguageModel.Greek.TrainingSources
+[submodule "Components/Grammophone.Vectors"]
 	path = Components/Grammophone.Vectors
-	url = https://github.com/grammophone/Gramma.Vectors
-[submodule "Components/Gramma.SVM.Validator"]
+	url = https://github.com/grammophone/Grammophone.Vectors
+[submodule "Components/Grammophone.SVM.Validator"]
 	path = Components/Grammophone.SVM.Validator
-	url = https://github.com/grammophone/Gramma.SVM.Validator
-[submodule "Components/Gramma.Inference"]
+	url = https://github.com/grammophone/Grammophone.SVM.Validator
+[submodule "Components/Grammophone.EnnounInference"]
 	path = Components/Grammophone.EnnounInference
-	url = https://github.com/grammophone/Gramma.Inference
-[submodule "Components/Gramma.Lexica"]
+	url = https://github.com/grammophone/Grammophone.EnnounInference
+[submodule "Components/Grammophone.Lexica"]
 	path = Components/Grammophone.Lexica
-	url = https://github.com/grammophone/Gramma.Lexica
-[submodule "Components/Gramma.Lexica.Greek.Sources"]
+	url = https://github.com/grammophone/Grammophone.Lexica
+[submodule "Components/Grammophone.Lexica.Greek.Sources"]
 	path = Components/Grammophone.Lexica.Greek.Sources
-	url = https://github.com/grammophone/Gramma.Lexica.Greek.Sources
-[submodule "Components/Gramma.BetaImport.Viewer"]
+	url = https://github.com/grammophone/Grammophone.Lexica.Greek.Sources
+[submodule "Components/Grammophone.BetaImport.Viewer"]
 	path = Components/Grammophone.BetaImport.Viewer
-	url = https://github.com/grammophone/Gramma.BetaImport.Viewer
-[submodule "Components/Gramma.Serialization.Test"]
+	url = https://github.com/grammophone/Grammophone.BetaImport.Viewer
+[submodule "Components/Grammophone.Serialization.Test"]
 	path = Components/Grammophone.Serialization.Test
-	url = https://github.com/grammophone/Gramma.Serialization.Test
-[submodule "Components/Gramma.Indexing.Test"]
+	url = https://github.com/grammophone/Grammophone.Serialization.Test
+[submodule "Components/Grammophone.Indexing.Test"]
 	path = Components/Grammophone.Indexing.Test
-	url = https://github.com/grammophone/Gramma.Indexing.Test
-[submodule ".\\Components/Gramma.BetaImport"]
-	path = .\\Components/Gramma.BetaImport
-	url = https://github.com/grammophone/Gramma.BetaImport.git
-[submodule ".\\Components/Gramma.BetaImport.Viewer"]
-	path = .\\Components/Gramma.BetaImport.Viewer
-	url = https://github.com/grammophone/Gramma.BetaImport.Viewer.git
-[submodule ".\\Components\\Gramma.Caching"]
-	path = .\\Components\\Gramma.Caching
-	url = https://github.com/grammophone/Gramma.Caching.git
-[submodule ".\\Components\\Gramma.Configuration"]
-	path = .\\Components\\Gramma.Configuration
-	url = https://github.com/grammophone/Gramma.Configuration.git
-[submodule ".\\Components\\Gramma.CRF"]
-	path = .\\Components\\Gramma.CRF
-	url = https://github.com/grammophone/Gramma.CRF.git
-[submodule ".\\Components\\Gramma.DataStreaming"]
-	path = .\\Components\\Gramma.DataStreaming
-	url = https://github.com/grammophone/Gramma.DataStreaming.git
-[submodule ".\\Components\\Gramma.DataStreaming.Azure"]
-	path = .\\Components\\Gramma.DataStreaming.Azure
-	url = https://github.com/grammophone/Gramma.DataStreaming.Azure.git
-[submodule ".\\Components\\Gramma.GenericContentModel"]
-	path = .\\Components\\Gramma.GenericContentModel
-	url = https://github.com/grammophone/Gramma.GenericContentModel.git
-[submodule ".\\Components\\Gramma.Indexing.Test"]
-	path = .\\Components\\Gramma.Indexing.Test
-	url = https://github.com/grammophone/Gramma.Indexing.Test.git
-[submodule ".\\Components\\Gramma.Indexing"]
-	path = .\\Components\\Gramma.Indexing
-	url = https://github.com/grammophone/Gramma.Indexing.git
-[submodule ".\\Components\\Gramma.Inference"]
-	path = .\\Components\\Gramma.Inference
-	url = https://github.com/grammophone/Gramma.Inference.git
-[submodule ".\\Components\\Gramma.Kernels"]
-	path = .\\Components\\Gramma.Kernels
-	url = https://github.com/grammophone/Gramma.Kernels.git
-[submodule ".\\Components\\Gramma.LanguageModel"]
-	path = .\\Components\\Gramma.LanguageModel
-	url = https://github.com/grammophone/Gramma.LanguageModel.git
-[submodule ".\\Components\\Gramma.LanguageModel.Greek.Provision"]
-	path = .\\Components\\Gramma.LanguageModel.Greek.Provision
-	url = https://github.com/grammophone/Gramma.LanguageModel.Greek.Provision.git
-[submodule ".\\Components\\Gramma.LanguageModel.Greek.TrainingSources"]
-	path = .\\Components\\Gramma.LanguageModel.Greek.TrainingSources
-	url = https://github.com/grammophone/Gramma.LanguageModel.Greek.TrainingSources.git
-[submodule ".\\Components\\Gramma.Lexica"]
-	path = .\\Components\\Gramma.Lexica
-	url = https://github.com/grammophone/Gramma.Lexica.git
-[submodule ".\\Components\\Gramma.Lexica.Greek.Sources"]
-	path = .\\Components\\Gramma.Lexica.Greek.Sources
-	url = https://github.com/grammophone/Gramma.Lexica.Greek.Sources.git
-[submodule ".\\Components\\Gramma.Linq"]
-	path = .\\Components\\Gramma.Linq
-	url = https://github.com/grammophone/Gramma.Linq.git
-[submodule ".\\Components\\Gramma.Optimization"]
-	path = .\\Components\\Gramma.Optimization
-	url = https://github.com/grammophone/Gramma.Optimization.git
-[submodule ".\\Components\\Gramma.Optimization.Test"]
-	path = .\\Components\\Gramma.Optimization.Test
-	url = https://github.com/grammophone/Gramma.Optimization.test.git
-[submodule ".\\Components\\Gramma.Parallel"]
-	path = .\\Components\\Gramma.Parallel
-	url = https://github.com/grammophone/Gramma.Parallel.git
-[submodule ".\\Components\\Gramma.Parallel.Test"]
-	path = .\\Components\\Gramma.Parallel.Test
-	url = https://github.com/grammophone/Gramma.Parallel.Test.git
-[submodule ".\\Components\\Gramma.Serialization"]
-	path = .\\Components\\Gramma.Serialization
-	url = https://github.com/grammophone/Gramma.Serialization.git
-[submodule ".\\Components\\Gramma.Serialization.Test"]
-	path = .\\Components\\Gramma.Serialization.Test
-	url = https://github.com/grammophone/Gramma.Serialization.Test.git
-[submodule ".\\Components\\Gramma.SVM"]
-	path = .\\Components\\Gramma.SVM
-	url = https://github.com/grammophone/Gramma.SVM.git
-[submodule ".\\Components\\Gramma.SVM.Validator"]
-	path = .\\Components\\Gramma.SVM.Validator
-	url = https://github.com/grammophone/Gramma.SVM.Validator.git
-[submodule ".\\Components\\Gramma.Vectors"]
-	path = .\\Components\\Gramma.Vectors
-	url = https://github.com/grammophone/Gramma.Vectors.git
-[submodule ".\\Components\\Gramma.Windows"]
-	path = .\\Components\\Gramma.Windows
-	url = https://github.com/grammophone/Gramma.Windows.git
-[submodule ".\\Components\\Gramma.SVM.Test"]
-	path = .\\Components\\Gramma.SVM.Test
-	url = https://github.com/grammophone/Gramma.SVM.Test.git
+	url = https://github.com/grammophone/Grammophone.Indexing.Test
+[submodule ".\\Components/Grammophone.BetaImport"]
+	path = .\\Components/Grammophone.BetaImport
+	url = https://github.com/grammophone/Grammophone.BetaImport.git
+[submodule ".\\Components/Grammophone.BetaImport.Viewer"]
+	path = .\\Components/Grammophone.BetaImport.Viewer
+	url = https://github.com/grammophone/Grammophone.BetaImport.Viewer.git
+[submodule ".\\Components\\Grammophone.Caching"]
+	path = .\\Components\\Grammophone.Caching
+	url = https://github.com/grammophone/Grammophone.Caching.git
+[submodule ".\\Components\\Grammophone.Configuration"]
+	path = .\\Components\\Grammophone.Configuration
+	url = https://github.com/grammophone/Grammophone.Configuration.git
+[submodule ".\\Components\\Grammophone.CRF"]
+	path = .\\Components\\Grammophone.CRF
+	url = https://github.com/grammophone/Grammophone.CRF.git
+[submodule ".\\Components\\Grammophone.DataStreaming"]
+	path = .\\Components\\Grammophone.DataStreaming
+	url = https://github.com/grammophone/Grammophone.DataStreaming.git
+[submodule ".\\Components\\Grammophone.DataStreaming.Azure"]
+	path = .\\Components\\Grammophone.DataStreaming.Azure
+	url = https://github.com/grammophone/Grammophone.DataStreaming.Azure.git
+[submodule ".\\Components\\Grammophone.GenericContentModel"]
+	path = .\\Components\\Grammophone.GenericContentModel
+	url = https://github.com/grammophone/Grammophone.GenericContentModel.git
+[submodule ".\\Components\\Grammophone.Indexing.Test"]
+	path = .\\Components\\Grammophone.Indexing.Test
+	url = https://github.com/grammophone/Grammophone.Indexing.Test.git
+[submodule ".\\Components\\Grammophone.Indexing"]
+	path = .\\Components\\Grammophone.Indexing
+	url = https://github.com/grammophone/Grammophone.Indexing.git
+[submodule ".\\Components\\Grammophone.Inference"]
+	path = .\\Components\\Grammophone.Inference
+	url = https://github.com/grammophone/Grammophone.Inference.git
+[submodule ".\\Components\\Grammophone.Kernels"]
+	path = .\\Components\\Grammophone.Kernels
+	url = https://github.com/grammophone/Grammophone.Kernels.git
+[submodule ".\\Components\\Grammophone.LanguageModel"]
+	path = .\\Components\\Grammophone.LanguageModel
+	url = https://github.com/grammophone/Grammophone.LanguageModel.git
+[submodule ".\\Components\\Grammophone.LanguageModel.Greek.Provision"]
+	path = .\\Components\\Grammophone.LanguageModel.Greek.Provision
+	url = https://github.com/grammophone/Grammophone.LanguageModel.Greek.Provision.git
+[submodule ".\\Components\\Grammophone.LanguageModel.Greek.TrainingSources"]
+	path = .\\Components\\Grammophone.LanguageModel.Greek.TrainingSources
+	url = https://github.com/grammophone/Grammophone.LanguageModel.Greek.TrainingSources.git
+[submodule ".\\Components\\Grammophone.Lexica"]
+	path = .\\Components\\Grammophone.Lexica
+	url = https://github.com/grammophone/Grammophone.Lexica.git
+[submodule ".\\Components\\Grammophone.Lexica.Greek.Sources"]
+	path = .\\Components\\Grammophone.Lexica.Greek.Sources
+	url = https://github.com/grammophone/Grammophone.Lexica.Greek.Sources.git
+[submodule ".\\Components\\Grammophone.Linq"]
+	path = .\\Components\\Grammophone.Linq
+	url = https://github.com/grammophone/Grammophone.Linq.git
+[submodule ".\\Components\\Grammophone.Optimization"]
+	path = .\\Components\\Grammophone.Optimization
+	url = https://github.com/grammophone/Grammophone.Optimization.git
+[submodule ".\\Components\\Grammophone.Optimization.Test"]
+	path = .\\Components\\Grammophone.Optimization.Test
+	url = https://github.com/grammophone/Grammophone.Optimization.test.git
+[submodule ".\\Components\\Grammophone.Parallel"]
+	path = .\\Components\\Grammophone.Parallel
+	url = https://github.com/grammophone/Grammophone.Parallel.git
+[submodule ".\\Components\\Grammophone.Parallel.Test"]
+	path = .\\Components\\Grammophone.Parallel.Test
+	url = https://github.com/grammophone/Grammophone.Parallel.Test.git
+[submodule ".\\Components\\Grammophone.Serialization"]
+	path = .\\Components\\Grammophone.Serialization
+	url = https://github.com/grammophone/Grammophone.Serialization.git
+[submodule ".\\Components\\Grammophone.Serialization.Test"]
+	path = .\\Components\\Grammophone.Serialization.Test
+	url = https://github.com/grammophone/Grammophone.Serialization.Test.git
+[submodule ".\\Components\\Grammophone.SVM"]
+	path = .\\Components\\Grammophone.SVM
+	url = https://github.com/grammophone/Grammophone.SVM.git
+[submodule ".\\Components\\Grammophone.SVM.Validator"]
+	path = .\\Components\\Grammophone.SVM.Validator
+	url = https://github.com/grammophone/Grammophone.SVM.Validator.git
+[submodule ".\\Components\\Grammophone.Vectors"]
+	path = .\\Components\\Grammophone.Vectors
+	url = https://github.com/grammophone/Grammophone.Vectors.git
+[submodule ".\\Components\\Grammophone.Windows"]
+	path = .\\Components\\Grammophone.Windows
+	url = https://github.com/grammophone/Grammophone.Windows.git
+[submodule ".\\Components\\Grammophone.SVM.Test"]
+	path = .\\Components\\Grammophone.SVM.Test
+	url = https://github.com/grammophone/Grammophone.SVM.Test.git
