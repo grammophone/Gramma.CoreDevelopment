@@ -1,0 +1,22 @@
+﻿<Setup
+	xmlns="clr-namespace:Grammophone.EnnounInference.Configuration;assembly=Grammophone.EnnounInference"
+	xmlns:gp="clr-namespace:Grammophone.LanguageModel.Greek.Provision;assembly=Grammophone.LanguageModel.Greek.Provision"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:i="clr-namespace:Grammophone.EnnounInference;assembly=Grammophone.EnnounInference"
+	xmlns:ts="clr-namespace:Grammophone.LanguageModel.TrainingSources;assembly=Grammophone.LanguageModel">
+	
+	<Setup.LanguageProviders>
+
+		<gp:GreekLanguageProvider x:Name="greek" />
+		
+	</Setup.LanguageProviders>
+	
+	<Setup.InferenceResourceProviders>
+		
+		<i:InferenceResourceProvider 
+			Path="\Gramma Training\0 classes.inference" 
+			LanguageProvider="{x:Reference greek}" />
+	
+	</Setup.InferenceResourceProviders>
+
+</Setup>

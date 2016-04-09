@@ -1,0 +1,12 @@
+﻿<conf:StreamingSettings
+	xmlns:conf="clr-namespace:Grammophone.DataStreaming.Configuration;assembly=Grammophone.DataStreaming"
+	xmlns="clr-namespace:Grammophone.DataStreaming;assembly=Grammophone.DataStreaming"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<conf:StreamingSettings.Streamers>
+		<Streamers>
+			
+		</Streamers>
+	</conf:StreamingSettings.Streamers>
+
+</conf:StreamingSettings>

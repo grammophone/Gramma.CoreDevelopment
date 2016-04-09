@@ -1,0 +1,28 @@
+﻿<LexicaSetup
+	xmlns="clr-namespace:Grammophone.Lexica.Configuration;assembly=Grammophone.Lexica"
+	xmlns:ls="clr-namespace:Grammophone.Lexica.Sources;assembly=Grammophone.Lexica"
+	xmlns:gp="clr-namespace:Grammophone.LanguageModel.Greek.Provision;assembly=Grammophone.LanguageModel.Greek.Provision"
+	xmlns:gl="clr-namespace:Grammophone.Lexica.Greek.Sources.Perseus;assembly=Grammophone.Lexica.Greek.Sources"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:ts="clr-namespace:Grammophone.LanguageModel.TrainingSources;assembly=Grammophone.LanguageModel">
+
+	<LexicaSetup.LanguageProviders>
+
+		<gp:GreekLanguageProvider x:Name="greek" />
+		
+	</LexicaSetup.LanguageProviders>
+
+	<LexicaSetup.LexiconSourceSets>
+
+		<ls:LexiconSourceSet LanguageProvider="{x:Reference greek}" 
+												 Name="Liddell-Scott" 
+												 Description="An Intermediate Greek-English Lexicon">
+			<ls:LexiconSourceSet.Sources>
+				<gl:PerseusLexiconSource  SourceFilename="LiddellScott.xml" />
+			</ls:LexiconSourceSet.Sources>
+		</ls:LexiconSourceSet>
+
+	</LexicaSetup.LexiconSourceSets>
+	
+
+</LexicaSetup>
