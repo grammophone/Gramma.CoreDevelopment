@@ -138,10 +138,10 @@ namespace Grammophone.EnnounInference.Evaluator
 
 		public Task<Paragraph> GetParagraphAsync()
 		{
-			// I fwe have the paragraph ready, return a trivial task.
+			// If we have the paragraph ready, return a trivial task.
 			if (paragraph != null)
 			{
-				return Task.Factory.StartNew(() => paragraph);
+				return Task.FromResult(paragraph);
 			}
 
 			ProgressWindow progressWindow = new ProgressWindow();
