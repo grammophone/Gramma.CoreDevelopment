@@ -6,8 +6,9 @@
 	xmlns:perseus="clr-namespace:Grammophone.LanguageModel.Greek.TrainingSources.Perseus;assembly=Grammophone.LanguageModel.Greek.TrainingSources"
 	xmlns:tischendorf="clr-namespace:Grammophone.LanguageModel.Greek.TrainingSources.Tischendorf;assembly=Grammophone.LanguageModel.Greek.TrainingSources"
 	xmlns:lxx="clr-namespace:Grammophone.LanguageModel.Greek.TrainingSources.LXX;assembly=Grammophone.LanguageModel.Greek.TrainingSources"
-	xmlns:ts="clr-namespace:Grammophone.LanguageModel.TrainingSources;assembly=Grammophone.LanguageModel">
-	
+	xmlns:ts="clr-namespace:Grammophone.LanguageModel.TrainingSources;assembly=Grammophone.LanguageModel"
+	EnableReadingOldNamespaces="True">
+
 	<Setup.LanguageProviders>
 
 		<gp:GreekLanguageProvider x:Name="greek" />
