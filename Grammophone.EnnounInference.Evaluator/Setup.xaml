@@ -14,7 +14,7 @@
 	<Setup.InferenceResourceProviders>
 		
 		<i:InferenceResourceProvider 
-			Path="\Gramma Training\0 classes.inference" 
+			Path="\Ennoun Training\10292 classes including epic forms, 90000 SGD iterations with step coefficient 300 including Homer, expanded features, prioritized scoring, root decay R.inference" 
 			LanguageProvider="{x:Reference greek}" />
 	
 	</Setup.InferenceResourceProviders>

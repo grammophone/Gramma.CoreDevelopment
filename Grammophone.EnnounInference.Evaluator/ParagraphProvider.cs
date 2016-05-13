@@ -164,117 +164,84 @@ namespace Grammophone.EnnounInference.Evaluator
 
 				var sentenceBreaker = languageProvider.SentenceBreaker;
 
-				var sentenceBuilder = new StringBuilder();
-
-				var sentences = new List<string>();
-
-				bool previousWasTerminator = false;
-
-				for (int i = 0; i < this.text.Length; i++)
+				using (var textReader = new System.IO.StringReader(this.text))
 				{
-					char c = this.text[i];
+					var sentences = sentenceBreaker.SeparateSentences(textReader);
 
-					if (sentenceBreaker.IsSentenceDelimiter(c))
+					var trimmedSentences = (from sentence in sentences
+																	let trimmedSentence = sentence.Trim(' ', '\r', '\n')
+																	where trimmedSentence.Length > 0
+																	select trimmedSentence).ToArray();
+
+					// Run inference.
+					var inferredSentences = new WordInference[trimmedSentences.Length][];
+
+					progressWindow.Minimum = 0;
+					progressWindow.Maximum = trimmedSentences.Length;
+
+					for (int i = 0; i < trimmedSentences.Length; i++)
 					{
-						previousWasTerminator = true;
-					}
-					else
-					{
-						if (previousWasTerminator)
+						progressWindow.Value = i + 1;
+
+						var sentence = trimmedSentences[i];
+
+						var words = sentenceBreaker.Break(sentence);
+
+						var lemmata = inferenceResource.SentenceClassifier.InferLemmata(words);
+
+						var inferredSentence = new WordInference[words.Length];
+						inferredSentences[i] = inferredSentence;
+
+						for (int j = 0; j < words.Length; j++)
 						{
-							sentences.Add(sentenceBuilder.ToString());
+							var word = words[j];
+							var lemma = (lemmata != null ? lemmata[j] : null);
 
-							sentenceBuilder.Clear();
-
-							previousWasTerminator = false;
+							inferredSentence[j] = new WordInference(word, lemma);
 						}
 					}
 
-					sentenceBuilder.Append(c);
-				}
+					// Map the inference results to a paragraph attached to the UI thread.
 
-				if (sentenceBuilder.Length > 0)
-				{
-					var lastSentence = sentenceBuilder.ToString().Trim();
+					Paragraph newParagraph = null;
 
-					if (lastSentence.Length > 0)
+					parentWindow.Dispatcher.Invoke((Action)delegate
 					{
-						sentences.Add(lastSentence);
-					}
-				}
+						newParagraph = new Paragraph();
 
-				var trimmedSentences = (from sentence in sentences
-															 let trimmedSentence = sentence.Trim(' ', '\r', '\n')
-															 where trimmedSentence.Length > 0
-															 select trimmedSentence).ToArray();
-
-				// Run inference.
-				var inferredSentences = new WordInference[trimmedSentences.Length][];
-
-				progressWindow.Minimum = 0;
-				progressWindow.Maximum = trimmedSentences.Length;
-
-				for (int i = 0; i < trimmedSentences.Length; i++)
-				{
-					progressWindow.Value = i + 1;
-
-					var sentence = trimmedSentences[i];
-
-					var words = sentenceBreaker.Break(sentence);
-
-					var lemmata = inferenceResource.SentenceClassifier.InferLemmata(words);
-
-					var inferredSentence = new WordInference[words.Length];
-					inferredSentences[i] = inferredSentence;
-
-					for (int j = 0; j < words.Length; j++)
-					{
-						var word = words[j];
-						var lemma = (lemmata != null ? lemmata[j] : null);
-
-						inferredSentence[j] = new WordInference(word, lemma);
-					}
-				}
-
-				// Map the inference results to a paragraph attached to the UI thread.
-
-				Paragraph newParagraph = null;
-
-				parentWindow.Dispatcher.Invoke((Action)delegate
-				{
-					newParagraph = new Paragraph();
-
-					for (int i = 0; i < inferredSentences.Length; i++)
-					{
-						var inferredSentence = inferredSentences[i];
-
-						for (int j = 0; j < inferredSentence.Length; j++)
+						for (int i = 0; i < inferredSentences.Length; i++)
 						{
-							var wordInference = inferredSentence[j];
+							var inferredSentence = inferredSentences[i];
 
-							var word = wordInference.Word;
+							for (int j = 0; j < inferredSentence.Length; j++)
+							{
+								var wordInference = inferredSentence[j];
 
-							var lemmaInference = wordInference.LemmaInference;
+								var word = wordInference.Word;
 
-							var run = new Run(word + " ");
+								var lemmaInference = wordInference.LemmaInference;
 
-							if (lemmaInference != null)
-								runsToInferencesDictionary[run] = lemmaInference;
-							else
-								run.Foreground = Brushes.DarkRed;
+								var run = new Run(word + " ");
 
-							newParagraph.Inlines.Add(run);
+								if (lemmaInference != null)
+									runsToInferencesDictionary[run] = lemmaInference;
+								else
+									run.Foreground = Brushes.DarkRed;
+
+								newParagraph.Inlines.Add(run);
+							}
 						}
-					}
-				});
+					});
 
-				progressWindow.SafeClose();
+					progressWindow.SafeClose();
 
-				this.paragraph = newParagraph;
+					this.paragraph = newParagraph;
 
-				this.runsToInferencesDictionary = runsToInferencesDictionary;
+					this.runsToInferencesDictionary = runsToInferencesDictionary;
 
-				return newParagraph;
+					return newParagraph;
+				}
+
 			},
 			TaskCreationOptions.LongRunning);
 
